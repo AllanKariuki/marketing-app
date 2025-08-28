@@ -24,11 +24,11 @@ const OurServices = () => {
 
   return (
     <div className="bg-gray-50 py-16 px-8">
-      <div className="max-w-8xl mx-auto flex flex-col md:flex-row gap-4">
+      <div className="max-w-8xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-y-4">
         {/* Header Section */}
         <div>
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
-          <p className="text-gray-600 max-w-md">
+          <p className="text-gray-600 max-w-sm">
             Beyond haircuts, discover a comprehensive range of services, from coloring to extensions.
           </p>
         </div>
