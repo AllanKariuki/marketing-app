@@ -24,9 +24,9 @@ const OurServices = () => {
 
   return (
     <div className="bg-gray-50 py-16 px-8">
-      <div className="max-w-8xl mx-auto">
+      <div className="max-w-8xl mx-auto flex flex-col md:flex-row gap-4">
         {/* Header Section */}
-        <div className="mb-12">
+        <div>
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
           <p className="text-gray-600 max-w-md">
             Beyond haircuts, discover a comprehensive range of services, from coloring to extensions.
@@ -34,36 +34,34 @@ const OurServices = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
           {services.map((service, index) => (
-            <div 
+            <div
               key={index}
               className={`${service.bgColor} rounded-3xl p-8 relative overflow-hidden group cursor-pointer transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl`}
-              style={{ minHeight: '280px' }}
+              style={{
+                minHeight: '280px',
+                backgroundImage: `url(${service.image})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                // Optionally add a gradient overlay for readability
+                // backgroundBlendMode: 'multiply',
+              }}
             >
+              {/* Overlay for readability */}
+              {/* <div className="absolute inset-0 bg-black bg-opacity-10 pointer-events-none"></div> */}
+
               {/* Service Title */}
-              <div className={`${service.textColor} mb-6`}>
+              <div className={`${service.textColor} mb-6 relative z-10`}>
                 <span className="inline-block px-4 py-2 bg-white bg-opacity-90 rounded-full text-sm font-medium text-gray-800">
                   {service.title}
                 </span>
               </div>
 
-              {/* Service Image */}
-              <div className="absolute bottom-0 right-0 w-32 h-40 overflow-hidden">
-                <img 
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-500"
-                  style={{
-                    maskImage: 'linear-gradient(to bottom, transparent 0%, black 20%, black 100%)',
-                    WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 20%, black 100%)'
-                  }}
-                />
-              </div>
-
               {/* Decorative Elements */}
-              <div className="absolute top-4 right-4 w-8 h-8 bg-white bg-opacity-20 rounded-full"></div>
-              <div className="absolute bottom-4 left-4 w-12 h-12 bg-white bg-opacity-10 rounded-full"></div>
+              <div className="absolute top-4 right-4 w-8 h-8 bg-white bg-opacity-20 rounded-full z-10"></div>
+              <div className="absolute bottom-4 left-4 w-12 h-12 bg-white bg-opacity-10 rounded-full z-10"></div>
             </div>
           ))}
         </div>
