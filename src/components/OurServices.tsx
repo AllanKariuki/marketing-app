@@ -24,7 +24,7 @@ const OurServices = () => {
 
   return (
     <div className="bg-gray-50 py-16 px-8">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-8xl mx-auto">
         {/* Header Section */}
         <div className="mb-12">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
@@ -69,11 +69,11 @@ const OurServices = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-12">
+        {/* <div className="text-center mt-12">
           <button className="bg-red-700 hover:bg-red-800 text-white px-8 py-3 rounded-full font-medium transition-colors duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
             Book an Appointment
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );
