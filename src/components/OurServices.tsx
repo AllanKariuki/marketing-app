@@ -19,14 +19,20 @@ const OurServices = () => {
       image: "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=400&h=400&fit=crop&crop=face",
       bgColor: "bg-gray-300",
       textColor: "text-gray-800"
+    },
+    {
+      title: "Coloring",
+      image: "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=400&h=400&fit=crop&crop=face",
+      bgColor: "bg-gray-300",
+      textColor: "text-gray-800"
     }
   ];
 
   return (
     <div className="bg-gray-50 py-16 px-8">
-      <div className="max-w-8xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-y-4">
+        <div className="max-w-8xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-y-4">
         {/* Header Section */}
-        <div>
+          <div className="md:col-span-1">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
           <p className="text-gray-600 max-w-sm">
             Beyond haircuts, discover a comprehensive range of services, from coloring to extensions.
@@ -34,7 +40,7 @@ const OurServices = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full md:col-span-2">
           {services.map((service, index) => (
             <div
               key={index}
