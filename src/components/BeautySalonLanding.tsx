@@ -2,7 +2,7 @@ import React from 'react';
 
 const BeautySalonLanding: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-100 via-rose-50 to-amber-50">
+    <div className="bg-gradient-to-br from-pink-100 via-rose-50 to-amber-50 pb-20">
       {/* Navigation */}
       <nav className="flex items-center justify-between px-8 py-6 mx-10">
         <div className="flex items-center space-x-8">
@@ -30,7 +30,7 @@ const BeautySalonLanding: React.FC = () => {
       </nav>
 
       {/* Main Content */}
-      <div className="flex items-center justify-between px-8 mt-16 mx-30">
+      <div className="flex items-center justify-between px-8 mt-16 max-w-8xl mx-auto">
         {/* Left Content */}
         <div className="flex-1 max-w-2xl">
           <div className="mb-6 flex gap-4 items-center">
