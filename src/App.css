@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+.max-w-8xl {
+    max-width: 98rem; /* 1440px */
+}
