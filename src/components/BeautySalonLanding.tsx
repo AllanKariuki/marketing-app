@@ -1,11 +1,10 @@
 import React from 'react';
-import { Play } from 'lucide-react';
 
 const BeautySalonLanding: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-100 via-rose-50 to-amber-50">
       {/* Navigation */}
-      <nav className="flex items-center justify-between px-8 py-6">
+      <nav className="flex items-center justify-between px-8 py-6 mx-10">
         <div className="flex items-center space-x-8">
           <a href="#" className="text-gray-800 hover:text-gray-600 transition-colors">Home</a>
           <a href="#" className="text-gray-800 hover:text-gray-600 transition-colors">Services</a>
@@ -31,31 +30,25 @@ const BeautySalonLanding: React.FC = () => {
       </nav>
 
       {/* Main Content */}
-      <div className="flex items-center justify-between px-8 mt-16">
+      <div className="flex items-center justify-between px-8 mt-16 mx-30">
         {/* Left Content */}
         <div className="flex-1 max-w-2xl">
-          <div className="mb-6">
-            <div className="w-16 h-px bg-gray-800 mb-2"></div>
+          <div className="mb-6 flex gap-4 items-center">
+            <div className="w-24 text-center h-px bg-gray-800"></div>
             <p className="text-sm text-gray-600 font-light">Berlin, Germany</p>
           </div>
           
-          <h2 className="text-7xl font-light text-gray-900 leading-tight mb-12">
+          <h2 className="text-7xl font-semibold text-gray-800 leading-tight mb-12 scale-x-120 origin-left">
             All for the<br />
             sake of your<br />
-            <span className="text-gray-600">beauty</span>
+            <span className="text-white font-semibold">beauty</span>
           </h2>
           
           <div className="flex items-center space-x-8">
-            <button className="bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-colors">
+            <button className="bg-black w-60 text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-colors">
               Booking Now
             </button>
             
-            <button className="flex items-center space-x-3 text-gray-800 hover:text-gray-600 transition-colors group">
-              <div className="w-12 h-12 rounded-full border-2 border-gray-800 flex items-center justify-center group-hover:border-gray-600 transition-colors">
-                <Play size={16} className="ml-1" />
-              </div>
-              <span className="font-light underline">See the workflow</span>
-            </button>
           </div>
         </div>
 
@@ -75,16 +68,6 @@ const BeautySalonLanding: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Bottom Section */}
-      <div className="absolute bottom-8 left-8">
-        <div className="flex items-center space-x-4">
-          <span className="text-6xl font-light text-gray-400">02/</span>
-          <div>
-            <h3 className="text-xl font-light text-gray-800">About us</h3>
           </div>
         </div>
       </div>
